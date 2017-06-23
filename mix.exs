@@ -14,7 +14,8 @@ defmodule Tornado.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :hackney],
+     mod: {Tornado, []}]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +28,6 @@ defmodule Tornado.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:hackney, "~> 1.4.6"}]
   end
 end

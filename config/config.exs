@@ -10,7 +10,9 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :tornado, key: :value
+    config :tornado, initial_port: 9060
+    config :tornado, circuit_clients: 10
+    config :tornado, delay_for_domain: 10_000
 #
 # And access this configuration in your application as:
 #
